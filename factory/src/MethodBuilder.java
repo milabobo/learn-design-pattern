@@ -8,7 +8,7 @@ public class MethodBuilder<Fruit> {
     Map<FruitType, CreateMethod<Fruit>> map;
 
     public MethodBuilder() {
-        this.map = new HashMap<FruitType, CreateMethod<Fruit>>();
+        this.map = new HashMap<>();
     }
 
     CreateMethod<Fruit> get(FruitType type) {

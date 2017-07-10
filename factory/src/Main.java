@@ -4,24 +4,9 @@
 public class Main {
     public static void main(String[] args) {
         FruitFactory factory = FruitFactory.factory(new MethodBuilder<Fruit>()
-            .add(FruitType.APPLE, new CreateMethod<Fruit>() {
-                @Override
-                public Fruit getFruit() {
-                    return new Apple();
-                }
-            })
-            .add(FruitType.BANANA, new CreateMethod<Fruit>() {
-                @Override
-                public Fruit getFruit() {
-                    return new Banana();
-                }
-            })
-            .add(FruitType.PEAR, new CreateMethod<Fruit>() {
-                @Override
-                public Fruit getFruit() {
-                    return new Pear();
-                }
-            })
+            .add(FruitType.APPLE, Apple::new)
+            .add(FruitType.BANANA, Banana::new)
+            .add(FruitType.PEAR, Pear::new)
         );
 
         System.out.println(factory.create(FruitType.APPLE));
