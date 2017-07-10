@@ -2,7 +2,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Created by tianu on 7/10/17.
+ * Created by milabobo on 8:42 PM.
  */
 public class MethodBuilder<Fruit> {
     Map<FruitType, CreateMethod<Fruit>> map;
