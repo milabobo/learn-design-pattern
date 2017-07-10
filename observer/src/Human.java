@@ -9,7 +9,7 @@ public class Human implements IObserver {
     }
 
     @Override
-    public void notifyChanged(Observable observable) {
+    public void update(Observable observable) {
         System.out.println("Tree's total leaf: " + tree.getLeafCount());
     }
 }

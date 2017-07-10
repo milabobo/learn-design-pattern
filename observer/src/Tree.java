@@ -24,7 +24,7 @@ public class Tree implements Observable {
     @Override
     public void notifyDataChange() {
         for (int i = 0; i < observers.size(); i++) {
-            observers.get(i).notifyChanged(this);
+            observers.get(i).update(this);
         }
     }
 
